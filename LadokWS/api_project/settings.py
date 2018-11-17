@@ -25,6 +25,9 @@ SECRET_KEY = 'pg(^bao69g9=lfzl*g4o%qz&y^=gs1)4-xuv1%ple@vrn4x3&6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# SECURITY WARNING: remove this line in production!
+CORS_ORIGIN_ALLOW_ALL = DEBUG
+
 ALLOWED_HOSTS = []
 
 

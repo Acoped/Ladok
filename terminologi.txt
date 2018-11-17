@@ -2,3 +2,4 @@ Bokens terminologi - vår terminologi
 
 blogapi - LadokWS
 blog_project - api_project
+posts - grades
