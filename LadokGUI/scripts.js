@@ -47,16 +47,13 @@ for (let x = 0; x < sgList.length; x++) {
 var postTEST = 'http://localhost:8000/api/v1/';
 var simpleTEST = 'http://localhost:8000/api/v1/?ideal="D"/?enroll_code="E"/?grade="U"';
 
-alert(postTEST);
 postAPI(postTEST);
-alert('done');
 
 
 function postAPI(url) {
 	var hR = new XMLHttpRequest();
 	hR.open('POST', url, false); // syncronous just for POC implementation, should be async in production!
 	hR.setRequestHeader('Content-type', 'application/json;charset=UTF-8'); // needed?
-	alert('here');
 	hR.send(JSON.stringify({ideal: "TEST", enroll_code: "TEST", grade: "F"}));
 }
 
