@@ -1,17 +1,13 @@
 # LadokWS and LadokGUI
 
-<<<<<<< HEAD
-Below we present a high level sequential model of the project:
-
-![Sequential Model](/docs/Sequential_model.png "Sequential Model")
-
-The three different REST API:s consist of these methods:
-=======
 Below we present a sequential model of the project:
 
 ![Sequential Model](/docs/Sequential_model.png "Sequential Model")
 
 The three different REST API:s consist of these methods:
 
-![Sequential Model](/docs/API_documentation.png "API Documentation")
->>>>>>> 3145780c606b1592f08793901ee44b44a5d95a04
+| Resource | URI | HTTP method | Method |
+| :--- | :--- | :--- | :--- |
+| IDEAL | /IdealWS/api/checkStudent/{Ideal}/{CourseCode}/{SemesterCode} | GET | checkStudent |
+| PARAPLYET | /ParaplyetWS/api/getEnrollCode/{CourseCode}/{SemesterCode} | GET | getEnrollCode |
+| LADOK WS | /{Ideal}/{EnrollCode}/{Grade} | POST | setGrade |
