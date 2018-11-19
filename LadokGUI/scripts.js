@@ -57,6 +57,7 @@ function generateForm(ideal, courseCode, semesterCode, grade, enrollCode) {
 	iInp.setAttribute('type',"text");
 	iInp.setAttribute('name',"ideal");
 	iInp.setAttribute('value', ideal);
+	iInp.setAttribute('readonly', 'true');
 
 	var cInp = document.createElement("input");
 	cInp.setAttribute('type',"text");
@@ -89,6 +90,7 @@ function generateForm(ideal, courseCode, semesterCode, grade, enrollCode) {
 	eInp.setAttribute('type',"text");
 	eInp.setAttribute('name',"enroll_code");
 	eInp.setAttribute('value', enrollCode);
+	eInp.setAttribute('readonly', 'true');
 
 	sSel.append(uOpt);
 	sSel.append(gOpt);
