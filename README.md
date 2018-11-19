@@ -36,7 +36,26 @@ The three different REST API:s consist of these methods:
 
 ## Installation
 
-Blabla
+### MySQL database
+
+There are two SQL scripts available in the /src/resources/ of the two Java projects. Use these to create your MySql databases schema. Make sure to connect to the database accorindgly in the scripts.
+
+### Java JAX
+
+Using Glassfish 5 server and Java EE 7. We used Netbeans 8.2 to set up the project.
+
+### Django
+
+First setup your Django admin account on your localhost.
+
+Make sure that you have the correct system dependencies installed (Python 3.7, pipenv). The other dependencies will be loaded to your virtual environment from the pipfile. Then the Django part of the project can be set up with these lines of codes in the command line:
+
+```console
+cd LadokWS
+pipenv shell                // creates a new virtual environment
+pipenv install              // installes dependencies in VE from pipfile
+python manage.py runserver
+```
 
 ## Runtime example
 
