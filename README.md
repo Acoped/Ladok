@@ -57,6 +57,8 @@ pipenv install              // installes dependencies in VE from pipfile
 python manage.py runserver
 ```
 
-## Runtime example
+## Video walk-through
 
-Link to video of an example run:
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Jv-gBUXIeR0
+" target="_blank"><img src="http://img.youtube.com/vi/Jv-gBUXIeR0/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
