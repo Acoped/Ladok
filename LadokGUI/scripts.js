@@ -54,7 +54,7 @@ function postAPI(url) {
 	var hR = new XMLHttpRequest();
 	hR.open('POST', url, false); // syncronous just for POC implementation, should be async in production!
 	hR.setRequestHeader('Content-type', 'application/json;charset=UTF-8'); // needed?
-	hR.send(JSON.stringify({ideal: "TEST", enroll_code: "TEST", grade: "F"}));
+	hR.send(JSON.stringify({ideal: "TEST", enroll_code: "TEST", grade: "C"}));
 }
 
 
@@ -79,15 +79,23 @@ function getEnrollCode(ideal, courseCode, semesterCode) {
 }
 
 
+function submit(form) {
+	alert("hej");
+}
+
+
 function generateForm(ideal, courseCode, semesterCode, grade, enrollCode) {
 	var f = document.createElement("form");
-	f.setAttribute("onsubmit", "submit(this)");
+	f.setAttribute("method", "POST");
+	f.setAttribute("action", "http://localhost:8000/api/v1/");
+	// f.setAttribute("onsubmit", "submit(this)");
+	
 
 	var iInp = document.createElement("input"); //input element, text
 	iInp.setAttribute('type',"text");
 	iInp.setAttribute('name',"ideal");
 	iInp.setAttribute('value', ideal);
-	iInp.setAttribute('disabled', 'true');
+	// iInp.setAttribute('disabled', 'true');
 
 	var cInp = document.createElement("input"); //input element, text
 	cInp.setAttribute('type',"text");
@@ -102,7 +110,7 @@ function generateForm(ideal, courseCode, semesterCode, grade, enrollCode) {
 	sInp.setAttribute('disabled', 'true');
 
 	var sSel = document.createElement("select"); //input element, text
-	sSel.setAttribute('name',"grades");
+	sSel.setAttribute('name',"grade");
 
 	var uOpt = document.createElement("option"); //input element, text
 	uOpt.setAttribute('value',"U");
@@ -118,9 +126,9 @@ function generateForm(ideal, courseCode, semesterCode, grade, enrollCode) {
 
 	var eInp = document.createElement("input"); //input element, text
 	eInp.setAttribute('type',"text");
-	eInp.setAttribute('name',"enrollCode");
+	eInp.setAttribute('name',"enroll_code");
 	eInp.setAttribute('value', enrollCode);
-	eInp.setAttribute('disabled', 'true');
+	// eInp.setAttribute('disabled', 'true');
 
 	sSel.append(uOpt);
 	sSel.append(gOpt);
@@ -131,6 +139,8 @@ function generateForm(ideal, courseCode, semesterCode, grade, enrollCode) {
 	f.append(sInp);
 	f.append(sSel);
 	f.append(eInp);
+
+	f.setAttribute("onsubmit", "submit(this)");
 
 	if (enrollCode != 'Student not Registred') {
 		var sub = document.createElement("input");
