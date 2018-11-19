@@ -1,4 +1,15 @@
-# LadokWS and LadokGUI
+# LadokWS and LadokGUI - A proof of concept with REST API:s
+
+## Description
+
+This system is a 
+
+The project consists of:
+
+- Three REST API:s, two of which implemented in Java JAX, and one implemented in Python's Django
+- A client/GUI, calling the GET and POST methods supplied by the REST API:s
+
+## Model
 
 Below we present a sequential model of the project:
 
@@ -11,3 +22,7 @@ The three different REST API:s consist of these methods:
 | IDEAL | /IdealWS/api/checkStudent/{Ideal}/{CourseCode}/{SemesterCode} | GET | checkStudent |
 | PARAPLYET | /ParaplyetWS/api/getEnrollCode/{CourseCode}/{SemesterCode} | GET | getEnrollCode |
 | LADOK WS | /{Ideal}/{EnrollCode}/{Grade} | POST | setGrade |
+
+## Installation
+
+Blabla
