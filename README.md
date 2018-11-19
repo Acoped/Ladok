@@ -46,9 +46,9 @@ Using Glassfish 5 server and Java EE 7. We used Netbeans 8.2 to set up the proje
 
 ### Django
 
-First setup your Django admin account on your localhost.
+Make sure that you have the correct system dependencies installed (Python 3.7, pipenv). The other dependencies will be loaded to your virtual environment from the pipfile. 
 
-Make sure that you have the correct system dependencies installed (Python 3.7, pipenv). The other dependencies will be loaded to your virtual environment from the pipfile. Then the Django part of the project can be set up with these lines of codes in the command line:
+First setup your Django admin account. Then the Django part of the project can be set up with these lines of codes in the command line:
 
 ```console
 cd LadokWS
