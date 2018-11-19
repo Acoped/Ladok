@@ -1,4 +1,4 @@
-# LadokWS and LadokGUI - A proof of concept with REST API:s
+# Ladok student grading - A proof of concept with REST API:s
 
 ## Description
 
